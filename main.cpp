@@ -6,19 +6,19 @@
 
 using namespace std;
 
-double area_of_hexagon(double side)
+double celsius_to_fahrenheit_converter(double temperature_in_celsius)
 {
-    double area = (1.5 * sqrt(3)) * pow(side,2);
-    return area;
+    // 9.0 instead of 9 to avoid integer division
+    double temperature_in_fahrenheit = ((9.0 / 5) * temperature_in_celsius) + 32;
+    return temperature_in_fahrenheit;
 };
 
 int main()
 {
 
-    double my_side = 0;
-
-    cout << "Give the length of your regular hexagon" << endl;
-    cin >> my_side;
-    cout << "The area of you hexagon is " << area_of_hexagon(my_side) << endl;
+    double my_temperature = 0;
+    cout << "Give the temperature of your choice in Celsius:!" << endl;
+    cin >> my_temperature;
+    cout << my_temperature << "˚C is " << celsius_to_fahrenheit_converter(my_temperature) << "˚F" << endl;
     return 0;
 };
